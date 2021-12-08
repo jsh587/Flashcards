@@ -1,0 +1,96 @@
+body {
+    background: #CFE7FF;
+    align-content: center;
+}
+
+#quizArea {
+    width: 55vw;
+    height: 100vh;
+    max-width: 750px;
+    max-height: 750px;
+    margin: 2% auto;
+    background: #FFFFFF;
+    border: 6px solid #037EFF;
+    box-sizing: border-box;
+    border-radius: 65px;
+}
+
+#quiz-title {
+    display: flex;
+    width: 60%;
+    height: 10%;
+    margin: 2% auto;
+    background: #037EFF;
+    border-radius: 305px;
+    align-items: center;
+}
+
+#titleText{
+    position: relative;
+    max-font-size: 150%;
+    color: #FFFFFF;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 500;
+    left: 10%
+}
+
+#container {
+    display: grid;
+    width: 80%;
+    height: 80%;
+    margin: 2% auto;
+    background: #CFE7FF;
+    border-radius: 50px;
+    grid-column-gap: 5%;
+    grid-row-gap: 5%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    padding: 2% 2% 2% 2%;
+    grid-template-areas:
+    'one two three'
+    'four five six'
+    'seven eight nine';
+}
+.card{
+    /*min-width: 50px;
+    width: 200px;
+    height: 200px;
+    min-height: 50px;*/
+    transform-style: preserve-3d;
+    transition: transform .2s ease-in-out;
+    z-index: 2;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.back, .front {
+    height: 100%;
+    width: 100%;
+    border-radius: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    background: #FFFFFF;
+    font-family: 'Readex Pro', sans-serif;
+    font-weight: 300;
+    position: absolute;
+}
+
+.back {
+    z-index: 1;
+    transform: rotateY(180deg);
+    background: #037EFF;
+    font-size: 150%;
+}
+
+.front {
+    z-index: 3;
+}
+.why {
+    transform-style: inherit;
+    height: 100%;
+    width: 100%;
+}
